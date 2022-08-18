@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Discount Price</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-black container">
+    <header>
+        <h1 class="text-center text-white fs-1 fw-semibold mt-5">Welcome To <span
+                class="text-secondary fs-1 fw-bold">GadgetMania</span></h1>
+        <h2 class="text-center text-white mt-3">Buy products with <span class="text-danger fw-bold h1">30%
+                Discount</span></h2>
+        <p class="text-center mb-5"><small class="text-secondary font-monospace">Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Enim porro dolores atque ullam quibusdam molestiae <br> quae expedita praesentium
+                veniam, illum cupiditate accusamus reprehenderit nisi, ratione, animi voluptate cum laborum
+                aliquid.</small></p>
+    </header>
+    <main>
+        <h1 class="text-center fw-semibold text-secondary mt-5">Latest <span class="text-danger fw-bold">Products</span>
+        </h1>
+        <div class="container text-center mt-5">
+            <div class="row d-flex justify-content-center gap-2 ">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <!-- first card  -->
+                    <div class="card bg-dark border-dark text-secondary" style="width: 18rem;">
+                        <img src="images/iphone.jpg" class="card-img-top border-0 rounded-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Iphone11 Pro</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
+                                doloremque perspiciatis possimus!</p>
+                            <h1>$<span id="price-iphone">899</span></h1>
+                            <button class="btn btn-danger rounded-2">Buy Now</button>
+                            <button href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#iphoneModal"
+                                id="iphone-btn">Use vouchar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center align-items-center">
+                    <!-- second card  -->
+                    <div class="card bg-dark border-dark text-secondary" style="width: 18rem;">
+                        <img src="images/macbook.jpg" class="card-img-top border-secondary  rounded-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Macbook M1</h5>
+                            <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+                                sed rem odio maxime assumenda atque.
+                            </p>
+                            <h1>$<span id="price-mac">1599</span></h1>
+                            <button class="btn btn-danger rounded-2">Buy Now</button>
+                            <button href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#macModal"
+                                id="mac-btn">Use vouchar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col  d-flex justify-content-center align-items-center">
+                    <!-- third card  -->
+                    <div class="card bg-dark border-dark text-secondary" style="width: 18rem;">
+                        <img src="images/watch.jpg" class="card-img-top border-0 rounded-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Apple watch <small>series7</small></h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+                                mollitia commodi veniam labore iusto quaerat!</p>
+                            <h1>$<span id="price-watch">699</span></h1>
+                            <button class="btn btn-danger rounded-2">Buy Now</button>
+                            <button type="button" href="#" class="btn btn-danger" data-bs-toggle="modal"
+                                data-bs-target="#watchModal" id="watch-btn">Use vouchar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!------------------------------------------ watch Modal--------------------------------------------------- -->
+
+        <div class="modal fade" id="watchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered ">
+                <div class="modal-content bg-secondary">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Apple Watch <small>series7</small></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div id="correct-vouchar-watch" style="display: none;">
+                                <h1> <span class="text-danger">CORRECT</span> !!! Go back and get The amazing <br>Deal!
+                                </h1>
+                            </div>
+                            <div class="mb-3" id="watch-modal-input" style="display: block;">
+                                <p>Get 30% Discount with Apple <span class="text-danger">secret</span> code. And pay
+                                    for your new Apple Watch over 24 months, interest‑free when you choose to check
+                                    out with Apple Card Monthly Installments.</p>
+                                <label for="message-text" class="col-form-label">Secret Code:</label>
+                                <input class="px-5 py-1 rounded-2 border-0" type="text" name="code"
+                                    id="code-input-watch">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger " id="submit-btn-watch">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------------------------------------ macbook--------------------------------------------------- -->
+        <div class="modal fade" id="macModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered ">
+                <div class="modal-content bg-secondary">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Macbook <small>M1</small></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div id="correct-vouchar-mac" style="display: none;">
+                                <h1> <span class="text-danger">CORRECT</span> !!! Go back and get The amazing <br>Deal!
+                                </h1>
+                            </div>
+                            <div class="mb-3" id="mac-modal-input">
+                                <p>Get 30% Discount with Apple <span class="text-danger">secret</span> code. And pay
+                                    for your new Apple Watch over 24 months, interest‑free when you choose to check
+                                    out with Apple Card Monthly Installments.</p>
+                                <label for="message-text" class="col-form-label">Secret Code:</label>
+                                <input class="px-5 py-1 rounded-2 border-0" type="text" name="code" id="code-input-mac">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" id="submit-btn-mac">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- -------------------------------------------------------iphone modal ------------------------------------ -->
+        <div class="modal fade" id="iphoneModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered ">
+
+                <div class="modal-content bg-secondary">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Iphone <small>11 pro</small></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div id="correct-vouchar-iphone" style="display: none;">
+                                <h1> <span class="text-danger">CORRECT</span> !!! Go back and get The amazing <br>Deal!
+                                </h1>
+                            </div>
+                            <div class="mb-3" id="iphone-modal-input" style="display: block;">
+                                <p>Get 30% Discount with Apple <span class="text-danger">secret</span> code. And pay
+                                    for your new Apple Watch over 24 months, interest‑free when you choose to check
+                                    out with Apple Card Monthly Installments.</p>
+                                <label for="message-text" class="col-form-label">Secret Code:</label>
+                                <input class="px-5 py-1 rounded-2 border-0" type="text" name="code"
+                                    id="code-input-iphone">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger " id="submit-btn-iphone">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="utilities.js"></script>
+    <script src="watch.js"></script>
+    <script src="mac.js"></script>
+    <script src="iphone.js"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
